@@ -23,6 +23,8 @@ snap_apps_to_install=(
 # Update package lists
 apt update
 
+sudo ubuntu-drivers list
+
 # Install GPU drivers
 sudo ubuntu-drivers install
 
