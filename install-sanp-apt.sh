@@ -16,7 +16,6 @@ apt_apps_to_install=(
 snap_apps_to_install=(
     "brave"
     "steam"
-    "code"
     # Add more Snap applications as needed
 )
 
@@ -46,3 +45,24 @@ for app in "${snap_apps_to_install[@]}"; do
 done
 
 echo "Installation of specified applications completed."
+
+# Download URL for the latest version of Visual Studio Code
+download_url="https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64"
+
+# Download Visual Studio Code
+echo "Downloading Visual Studio Code..."
+wget -O /home/dani-p123456/Downloads/vscode.deb "$download_url"
+
+# Wait for the download to complete
+while [ ! -f /home/dani-p123456/Downloads/vscode.deb ]; do
+    sleep 1
+done
+
+# Install Visual Studio Code
+echo "Installing Visual Studio Code..."
+dpkg -i /home/dani-p123456/Downloads/vscode.deb 
+
+# Install dependencies (if any)
+apt install -f
+
+echo "Visual Studio Code has been installed."
