@@ -1,6 +1,6 @@
 # Ubuntu auto install
 
-`bash install_ubuntu.sh`
+`sudo bash install_ubuntu.sh`
 
 ## Brave extensions
 
