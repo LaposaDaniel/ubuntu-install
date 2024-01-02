@@ -16,6 +16,7 @@ apt_apps_to_install=(
 snap_apps_to_install=(
     "brave"
     "steam"
+    "vlc"
     # Add more Snap applications as needed
 )
 
